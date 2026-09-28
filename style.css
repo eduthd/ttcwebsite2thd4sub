@@ -31,11 +31,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.95); /* FIX: readable header */
 }
 
 /* --- LOGO FIX: SVG now visible --- */
 .site-header img {
-    height: 80px;   /* Adjust size here */
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -59,12 +60,42 @@ header {
 /* --- Footer --- */
 footer {
     margin-top: auto;
-    background-color: rgba(66, 73, 83, 0.8);
+    background-color: #202945; /* FIX: solid brand navy */
     align-self: stretch;
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
-    color: white;
+    color: white; /* FIX: readable text */
+}
+
+/* --- Footer links --- */
+footer a {
+    color: #F3C300; /* brand yellow */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* --- Unified footer text --- */
+footer p {
+    margin: 0.3em 0;
+    font-size: 0.85em;
+    color: #e6e6e6; /* FIX: readable on navy */
+}
+
+/* --- Social icons --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 0.6em 0;
+}
+
+.social-links img {
+    display: block;
 }
 
 /* --- Heading colours --- */
@@ -75,9 +106,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
+/* --- Paragraphs --- */
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #202945; /* FIX: readable on white */
 }
 
 /* --- Table styling --- */
@@ -102,17 +135,17 @@ form {
     border: 1px solid #e5e5e5;
     padding: 1.5em;
     margin: 2em 0;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95); /* FIX: readable form */
+    border-radius: 0.5em;
 }
 
 label {
     font-size: 0.9em;
+    color: #202945;
 }
 
 input[type='text'], input[type='email'], textarea {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #b3b3b3;
+    border: 1px solid #b3b3b3;
     width: 100%;
     margin-bottom: 1em;
     padding: 0.3em;
@@ -127,69 +160,39 @@ input[type='submit'] {
     padding: 0.5em 2em;
     background-color: #1A3D6D;
     color: white;
-    border-style: none;
+    border: none;
     border-radius: 0.3em;
-    margin: 1.5em 0 0 0;
+    margin-top: 1.5em;
 }
 
-/* --- Full-page background images (Firefox-compatible) --- */
+/* --- Background images (one per page) --- */
 
-html.home-page,
-html.services-page,
-html.contact-page {
+html.home-page {
+    background-image: url("../images/AdobeStock_39219837.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Individual page backgrounds */
-html.home-page {
-    background-image: url("../images/AdobeStock_39219837.jpeg");
 }
 
 html.services-page {
     background-image: url("../images/AdobeStock_63511291.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 html.contact-page {
     background-image: url("../images/AdobeStock_134362781.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* --- Make content readable on top of background --- */
-header, footer, h1, h2, h3, p, ul, table, form {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 0.5em;
-    padding: 1em;
-}
-
-/* --- Footer additions: social icons, legal link, copyright, credits --- */
-footer a {
-    color: #1A3D6D;
-}
-
-footer p {
+/* --- FIX: remove white blobs everywhere --- */
+h1, h2, h3, p, ul, table {
     background-color: transparent;
-    padding: 0.2em;
-    margin: 0.3em 0;
-    color: #202945;
-    font-size: 0.85em;
-}
-
-footer .credits {
-    font-size: 0.75em;
-    color: #424953;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin: 0.6em 0;
-}
-
-.social-links img {
-    display: block;
+    padding: 0;
+    border-radius: 0;
 }
 
 /* --- Services page image gallery --- */
@@ -200,7 +203,7 @@ footer .credits {
     gap: 0.6em;
     margin: 1em 0;
     padding: 0.6em;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.95); /* readable gallery */
     border-radius: 0.5em;
 }
 
