@@ -162,3 +162,51 @@ header, footer, h1, h2, h3, p, ul, table, form {
     border-radius: 0.5em;
     padding: 1em;
 }
+
+/* --- Footer additions: social icons, legal link, copyright, credits --- */
+footer a {
+    color: #1A3D6D;
+}
+
+footer p {
+    background-color: transparent;
+    padding: 0.2em;
+    margin: 0.3em 0;
+    color: #202945;
+    font-size: 0.85em;
+}
+
+footer .credits {
+    font-size: 0.75em;
+    color: #424953;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 0.6em 0;
+}
+
+.social-links img {
+    display: block;
+}
+
+/* --- Services page image gallery --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6em;
+    margin: 1em 0;
+    padding: 0.6em;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5em;
+}
+
+.gallery img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 0.3em;
+}
